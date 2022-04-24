@@ -33,7 +33,6 @@ namespace WinFormsApp1.View
             this.pn_Left = new System.Windows.Forms.Panel();
             this.pn_menu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -50,6 +49,10 @@ namespace WinFormsApp1.View
             this.label1 = new System.Windows.Forms.Label();
             this.pn_Right = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.pn_Left.SuspendLayout();
             this.pn_menu.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,7 +71,7 @@ namespace WinFormsApp1.View
             this.pn_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.pn_Left.Location = new System.Drawing.Point(0, 0);
             this.pn_Left.Name = "pn_Left";
-            this.pn_Left.Size = new System.Drawing.Size(281, 788);
+            this.pn_Left.Size = new System.Drawing.Size(281, 801);
             this.pn_Left.TabIndex = 0;
             this.pn_Left.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -78,14 +81,17 @@ namespace WinFormsApp1.View
             this.pn_menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_menu.Location = new System.Drawing.Point(0, 110);
             this.pn_menu.Name = "pn_menu";
-            this.pn_menu.Size = new System.Drawing.Size(279, 640);
+            this.pn_menu.Size = new System.Drawing.Size(279, 657);
             this.pn_menu.TabIndex = 0;
             this.pn_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_menu_Paint);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.panel3.Controls.Add(this.button11);
             this.panel3.Controls.Add(this.button10);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button7);
@@ -98,23 +104,8 @@ namespace WinFormsApp1.View
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(279, 640);
+            this.panel3.Size = new System.Drawing.Size(279, 657);
             this.panel3.TabIndex = 0;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(0, 576);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(279, 64);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Đăng Xuất";
-            this.button10.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
@@ -124,9 +115,9 @@ namespace WinFormsApp1.View
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(0, 512);
+            this.button9.Location = new System.Drawing.Point(0, 401);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(279, 64);
+            this.button9.Size = new System.Drawing.Size(279, 50);
             this.button9.TabIndex = 8;
             this.button9.Text = "Lập Báo Cáo";
             this.button9.UseVisualStyleBackColor = false;
@@ -139,9 +130,9 @@ namespace WinFormsApp1.View
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(0, 448);
+            this.button8.Location = new System.Drawing.Point(0, 351);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(279, 64);
+            this.button8.Size = new System.Drawing.Size(279, 50);
             this.button8.TabIndex = 7;
             this.button8.Text = "Thanh Lý Sách";
             this.button8.UseVisualStyleBackColor = false;
@@ -154,9 +145,9 @@ namespace WinFormsApp1.View
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(0, 384);
+            this.button7.Location = new System.Drawing.Point(0, 301);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(279, 64);
+            this.button7.Size = new System.Drawing.Size(279, 50);
             this.button7.TabIndex = 6;
             this.button7.Text = "Ghi Nhận Mất Sách";
             this.button7.UseVisualStyleBackColor = false;
@@ -169,9 +160,9 @@ namespace WinFormsApp1.View
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(0, 320);
+            this.button6.Location = new System.Drawing.Point(0, 251);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(279, 64);
+            this.button6.Size = new System.Drawing.Size(279, 50);
             this.button6.TabIndex = 5;
             this.button6.Text = "Lập Phiếu Thu Tiền Phạt";
             this.button6.UseVisualStyleBackColor = false;
@@ -184,9 +175,9 @@ namespace WinFormsApp1.View
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(0, 256);
+            this.button5.Location = new System.Drawing.Point(0, 201);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(279, 64);
+            this.button5.Size = new System.Drawing.Size(279, 50);
             this.button5.TabIndex = 4;
             this.button5.Text = "Nhận Trả Sách";
             this.button5.UseVisualStyleBackColor = false;
@@ -199,9 +190,9 @@ namespace WinFormsApp1.View
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(0, 192);
+            this.button4.Location = new System.Drawing.Point(0, 151);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(279, 64);
+            this.button4.Size = new System.Drawing.Size(279, 50);
             this.button4.TabIndex = 3;
             this.button4.Text = "Tra Cứu Sách";
             this.button4.UseVisualStyleBackColor = false;
@@ -214,9 +205,9 @@ namespace WinFormsApp1.View
             this.btnAddBook.FlatAppearance.BorderSize = 0;
             this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddBook.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddBook.Location = new System.Drawing.Point(0, 128);
+            this.btnAddBook.Location = new System.Drawing.Point(0, 101);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(279, 64);
+            this.btnAddBook.Size = new System.Drawing.Size(279, 50);
             this.btnAddBook.TabIndex = 2;
             this.btnAddBook.Text = "Tiếp Nhận Sách Mới";
             this.btnAddBook.UseVisualStyleBackColor = false;
@@ -230,10 +221,10 @@ namespace WinFormsApp1.View
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(0, 64);
+            this.button2.Location = new System.Drawing.Point(0, 51);
             this.button2.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 64);
+            this.button2.Size = new System.Drawing.Size(279, 50);
             this.button2.TabIndex = 1;
             this.button2.Text = "Lập Thẻ Đọc Giả";
             this.button2.UseVisualStyleBackColor = false;
@@ -250,7 +241,7 @@ namespace WinFormsApp1.View
             this.btnAddStaff.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddStaff.Location = new System.Drawing.Point(0, 0);
             this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(279, 64);
+            this.btnAddStaff.Size = new System.Drawing.Size(279, 51);
             this.btnAddStaff.TabIndex = 0;
             this.btnAddStaff.Text = "Tiếp nhận nhân viên";
             this.btnAddStaff.UseVisualStyleBackColor = false;
@@ -288,9 +279,9 @@ namespace WinFormsApp1.View
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 750);
+            this.panel1.Location = new System.Drawing.Point(0, 767);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 36);
+            this.panel1.Size = new System.Drawing.Size(279, 32);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -309,7 +300,7 @@ namespace WinFormsApp1.View
             this.pn_Right.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_Right.Location = new System.Drawing.Point(281, 0);
             this.pn_Right.Name = "pn_Right";
-            this.pn_Right.Size = new System.Drawing.Size(981, 788);
+            this.pn_Right.Size = new System.Drawing.Size(981, 801);
             this.pn_Right.TabIndex = 1;
             // 
             // panelChildForm
@@ -317,15 +308,76 @@ namespace WinFormsApp1.View
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(981, 788);
+            this.panelChildForm.Size = new System.Drawing.Size(981, 801);
             this.panelChildForm.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(0, 451);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(279, 50);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Mượn Sách";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(0, 501);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(279, 50);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Nhận Trả Sách";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button10.Location = new System.Drawing.Point(0, 551);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(279, 50);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "Thanh Lý Sách";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button11.Location = new System.Drawing.Point(0, 601);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(279, 50);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Đăng Xuất";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // MainLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1262, 788);
+            this.ClientSize = new System.Drawing.Size(1262, 801);
             this.Controls.Add(this.pn_Right);
             this.Controls.Add(this.pn_Left);
             this.Name = "MainLayout";
@@ -354,7 +406,6 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAddStaff;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
@@ -364,5 +415,9 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }

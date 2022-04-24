@@ -69,5 +69,10 @@ namespace WinFormsApp1.View
         {
             openChildForm(new Form2());
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
