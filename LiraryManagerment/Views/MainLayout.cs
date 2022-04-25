@@ -74,5 +74,10 @@ namespace WinFormsApp1.View
         {
 
         }
+
+        private void btnBorrowBook_Click(object sender, EventArgs e)
+        {
+            openChildForm(new BorrowBookView());
+        }
     }
 }

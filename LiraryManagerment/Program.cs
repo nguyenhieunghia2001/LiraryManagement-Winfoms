@@ -1,4 +1,3 @@
-using LiraryManagerment.Models;
 using LiraryManagerment.Views;
 using System;
 using System.Collections.Generic;
@@ -17,10 +16,6 @@ namespace LiraryManagerment
         [STAThread]
         static void Main()
         {
-            //build Context
-            var db = new DataContext();
-            db.Database.EnsureCreated();
-
             //build windowns
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
