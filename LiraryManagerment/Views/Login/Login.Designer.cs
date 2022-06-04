@@ -33,10 +33,10 @@
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbErrorLogin = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,18 +77,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(510, 512);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(391, 47);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.Lime;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.Location = new System.Drawing.Point(510, 512);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(391, 47);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
@@ -110,16 +111,15 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // lbErrorLogin
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(545, 296);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(318, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Tên đăng nhập hoặc mật khẩu không chính xác";
+            this.lbErrorLogin.AutoSize = true;
+            this.lbErrorLogin.BackColor = System.Drawing.Color.White;
+            this.lbErrorLogin.ForeColor = System.Drawing.Color.Red;
+            this.lbErrorLogin.Location = new System.Drawing.Point(545, 296);
+            this.lbErrorLogin.Name = "lbErrorLogin";
+            this.lbErrorLogin.Size = new System.Drawing.Size(0, 20);
+            this.lbErrorLogin.TabIndex = 7;
             // 
             // label5
             // 
@@ -137,10 +137,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 801);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbErrorLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPwd);
@@ -159,10 +159,10 @@
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbErrorLogin;
         private System.Windows.Forms.Label label5;
     }
 }

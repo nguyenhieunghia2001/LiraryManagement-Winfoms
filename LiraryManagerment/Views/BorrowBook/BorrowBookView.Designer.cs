@@ -31,38 +31,45 @@
             this.grHeader = new System.Windows.Forms.GroupBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDeleteSelect = new System.Windows.Forms.Button();
+            this.btnChoise = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dgBookList = new System.Windows.Forms.DataGridView();
+            this.dgBookSelected = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDebt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtStaffBOD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtStaffName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtStaffPhone = new System.Windows.Forms.TextBox();
+            this.btnSearchStaff = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.grHeader.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBookList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBookSelected)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -72,10 +79,6 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // grHeader
@@ -100,18 +103,113 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.panel10);
-            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Controls.Add(this.btnDeleteSelect);
+            this.groupBox2.Controls.Add(this.btnChoise);
+            this.groupBox2.Controls.Add(this.btnSearch);
+            this.groupBox2.Controls.Add(this.txtSearch);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.dgBookList);
+            this.groupBox2.Controls.Add(this.dgBookSelected);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(0, 59);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(689, 695);
+            this.groupBox2.Size = new System.Drawing.Size(689, 736);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Thông tin sách";
+            // 
+            // btnDeleteSelect
+            // 
+            this.btnDeleteSelect.Location = new System.Drawing.Point(590, 29);
+            this.btnDeleteSelect.Name = "btnDeleteSelect";
+            this.btnDeleteSelect.Size = new System.Drawing.Size(93, 29);
+            this.btnDeleteSelect.TabIndex = 11;
+            this.btnDeleteSelect.Text = "Xóa";
+            this.btnDeleteSelect.UseVisualStyleBackColor = true;
+            this.btnDeleteSelect.Click += new System.EventHandler(this.btnDeleteSelect_Click);
+            // 
+            // btnChoise
+            // 
+            this.btnChoise.Location = new System.Drawing.Point(292, 701);
+            this.btnChoise.Name = "btnChoise";
+            this.btnChoise.Size = new System.Drawing.Size(107, 29);
+            this.btnChoise.TabIndex = 10;
+            this.btnChoise.Text = "Chọn";
+            this.btnChoise.UseVisualStyleBackColor = true;
+            this.btnChoise.Click += new System.EventHandler(this.btnChoise_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(623, 370);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(60, 29);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Tìm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(385, 373);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Tên sách, tên tác giả";
+            this.txtSearch.Size = new System.Drawing.Size(232, 27);
+            this.txtSearch.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(12, 372);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(199, 28);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Sách trong thư viện";
+            // 
+            // dgBookList
+            // 
+            this.dgBookList.AllowUserToAddRows = false;
+            this.dgBookList.AllowUserToDeleteRows = false;
+            this.dgBookList.AllowUserToOrderColumns = true;
+            this.dgBookList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBookList.Location = new System.Drawing.Point(12, 406);
+            this.dgBookList.Name = "dgBookList";
+            this.dgBookList.ReadOnly = true;
+            this.dgBookList.RowHeadersWidth = 51;
+            this.dgBookList.RowTemplate.Height = 29;
+            this.dgBookList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgBookList.Size = new System.Drawing.Size(671, 289);
+            this.dgBookList.TabIndex = 4;
+            // 
+            // dgBookSelected
+            // 
+            this.dgBookSelected.AllowUserToAddRows = false;
+            this.dgBookSelected.AllowUserToDeleteRows = false;
+            this.dgBookSelected.AllowUserToOrderColumns = true;
+            this.dgBookSelected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBookSelected.Location = new System.Drawing.Point(12, 64);
+            this.dgBookSelected.Name = "dgBookSelected";
+            this.dgBookSelected.ReadOnly = true;
+            this.dgBookSelected.RowHeadersWidth = 51;
+            this.dgBookSelected.RowTemplate.Height = 29;
+            this.dgBookSelected.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgBookSelected.Size = new System.Drawing.Size(671, 277);
+            this.dgBookSelected.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(12, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 28);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Sách đã chọn";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnSubmit);
             this.groupBox3.Controls.Add(this.panel9);
             this.groupBox3.Controls.Add(this.panel8);
             this.groupBox3.Controls.Add(this.panel7);
@@ -121,14 +219,24 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(689, 59);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(274, 695);
+            this.groupBox3.Size = new System.Drawing.Size(274, 736);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kiểm tra thông tin đọc giả";
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(74, 611);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(120, 40);
+            this.btnSubmit.TabIndex = 9;
+            this.btnSubmit.Text = "Xác nhận";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.textBox8);
+            this.panel9.Controls.Add(this.txtDebt);
             this.panel9.Controls.Add(this.label8);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(3, 462);
@@ -136,26 +244,26 @@
             this.panel9.Size = new System.Drawing.Size(268, 79);
             this.panel9.TabIndex = 8;
             // 
-            // textBox8
+            // txtDebt
             // 
-            this.textBox8.Location = new System.Drawing.Point(17, 40);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(242, 27);
-            this.textBox8.TabIndex = 1;
+            this.txtDebt.Location = new System.Drawing.Point(17, 40);
+            this.txtDebt.Name = "txtDebt";
+            this.txtDebt.ReadOnly = true;
+            this.txtDebt.Size = new System.Drawing.Size(242, 27);
+            this.txtDebt.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(17, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 20);
+            this.label8.Size = new System.Drawing.Size(58, 20);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Loại thẻ";
+            this.label8.Text = "Tiền nợ";
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox7);
+            this.panel8.Controls.Add(this.txtAddress);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(3, 383);
@@ -163,26 +271,26 @@
             this.panel8.Size = new System.Drawing.Size(268, 79);
             this.panel8.TabIndex = 8;
             // 
-            // textBox7
+            // txtAddress
             // 
-            this.textBox7.Location = new System.Drawing.Point(17, 40);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(242, 27);
-            this.textBox7.TabIndex = 1;
+            this.txtAddress.Location = new System.Drawing.Point(17, 40);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
+            this.txtAddress.Size = new System.Drawing.Size(242, 27);
+            this.txtAddress.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(17, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 20);
+            this.label7.Size = new System.Drawing.Size(57, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Ngày Tạo";
+            this.label7.Text = "Địa Chỉ";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBox6);
+            this.panel7.Controls.Add(this.txtStaffBOD);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(3, 304);
@@ -190,13 +298,13 @@
             this.panel7.Size = new System.Drawing.Size(268, 79);
             this.panel7.TabIndex = 8;
             // 
-            // textBox6
+            // txtStaffBOD
             // 
-            this.textBox6.Location = new System.Drawing.Point(17, 40);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(242, 27);
-            this.textBox6.TabIndex = 1;
+            this.txtStaffBOD.Location = new System.Drawing.Point(17, 40);
+            this.txtStaffBOD.Name = "txtStaffBOD";
+            this.txtStaffBOD.ReadOnly = true;
+            this.txtStaffBOD.Size = new System.Drawing.Size(242, 27);
+            this.txtStaffBOD.TabIndex = 1;
             // 
             // label6
             // 
@@ -209,7 +317,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Controls.Add(this.txtStaffName);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(3, 225);
@@ -217,13 +325,13 @@
             this.panel6.Size = new System.Drawing.Size(268, 79);
             this.panel6.TabIndex = 7;
             // 
-            // textBox5
+            // txtStaffName
             // 
-            this.textBox5.Location = new System.Drawing.Point(17, 40);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(242, 27);
-            this.textBox5.TabIndex = 1;
+            this.txtStaffName.Location = new System.Drawing.Point(17, 40);
+            this.txtStaffName.Name = "txtStaffName";
+            this.txtStaffName.ReadOnly = true;
+            this.txtStaffName.Size = new System.Drawing.Size(242, 27);
+            this.txtStaffName.TabIndex = 1;
             // 
             // label5
             // 
@@ -258,7 +366,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.txtStaffId);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -266,13 +374,13 @@
             this.panel5.Size = new System.Drawing.Size(268, 79);
             this.panel5.TabIndex = 6;
             // 
-            // textBox4
+            // txtStaffId
             // 
-            this.textBox4.Location = new System.Drawing.Point(17, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(242, 27);
-            this.textBox4.TabIndex = 1;
+            this.txtStaffId.Location = new System.Drawing.Point(17, 40);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.ReadOnly = true;
+            this.txtStaffId.Size = new System.Drawing.Size(242, 27);
+            this.txtStaffId.TabIndex = 1;
             // 
             // label4
             // 
@@ -317,8 +425,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.txtStaffPhone);
+            this.panel2.Controls.Add(this.btnSearchStaff);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 23);
@@ -326,84 +434,49 @@
             this.panel2.Size = new System.Drawing.Size(268, 123);
             this.panel2.TabIndex = 3;
             // 
-            // textBox1
+            // txtStaffPhone
             // 
-            this.textBox1.Location = new System.Drawing.Point(53, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtStaffPhone.Location = new System.Drawing.Point(53, 34);
+            this.txtStaffPhone.Name = "txtStaffPhone";
+            this.txtStaffPhone.Size = new System.Drawing.Size(206, 27);
+            this.txtStaffPhone.TabIndex = 1;
             // 
-            // button1
+            // btnSearchStaff
             // 
-            this.button1.Location = new System.Drawing.Point(188, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearchStaff.Location = new System.Drawing.Point(188, 78);
+            this.btnSearchStaff.Name = "btnSearchStaff";
+            this.btnSearchStaff.Size = new System.Drawing.Size(71, 29);
+            this.btnSearchStaff.TabIndex = 2;
+            this.btnSearchStaff.Text = "Tìm";
+            this.btnSearchStaff.UseVisualStyleBackColor = true;
+            this.btnSearchStaff.Click += new System.EventHandler(this.btnSearchStaff_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 41);
+            this.label1.Location = new System.Drawing.Point(3, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SĐT:";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 23);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 269);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.dataGridView1);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 292);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(683, 400);
-            this.panel10.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 400);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(683, 269);
-            this.dataGridView2.TabIndex = 0;
+            this.label1.Text = "Email";
             // 
             // BorrowBookView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 754);
+            this.ClientSize = new System.Drawing.Size(963, 795);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grHeader);
             this.Name = "BorrowBookView";
             this.Text = "BorrowBookView";
+            this.Load += new System.EventHandler(this.BorrowBookView_Load);
             this.grHeader.ResumeLayout(false);
             this.grHeader.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBookList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBookSelected)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -421,10 +494,6 @@
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,33 +505,38 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDebt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtStaffBOD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtStaffName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtStaffPhone;
+        private System.Windows.Forms.Button btnSearchStaff;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dgBookSelected;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgBookList;
+        private System.Windows.Forms.Button btnChoise;
+        private System.Windows.Forms.Button btnDeleteSelect;
     }
 }
