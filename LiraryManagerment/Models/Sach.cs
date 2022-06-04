@@ -5,7 +5,7 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.model
+namespace LiraryManagerment.Models
 {
     public partial class Sach
     {
@@ -34,7 +34,6 @@ namespace LiraryManagerment.model
         public virtual Loaisach LoaiSach { get; set; }
         public virtual Nhanvien NguoiTiepNhan { get; set; }
         public virtual Tinhtrangsach TinhTrang { get; set; }
-        public virtual Phieuthutienphat Phieuthutienphat { get; set; }
         public virtual ICollection<Chitietphieumuon> Chitietphieumuon { get; set; }
         public virtual ICollection<Chitietphieutra> Chitietphieutra { get; set; }
         public virtual ICollection<Matsach> Matsach { get; set; }

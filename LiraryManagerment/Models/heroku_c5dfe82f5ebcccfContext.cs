@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.model
+namespace LiraryManagerment.Models
 {
     public partial class heroku_c5dfe82f5ebcccfContext : DbContext
     {
@@ -174,10 +174,14 @@ namespace LiraryManagerment.model
 
                 entity.Property(e => e.NgayLapThe)
                     .HasColumnType("timestamp")
-                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
-                    .ValueGeneratedOnAddOrUpdate();
+                    .HasDefaultValueSql("'0000-00-00 00:00:00'");
 
                 entity.Property(e => e.NgaySinh).HasColumnType("date");
+
+                entity.Property(e => e.NgayTao)
+                    .HasColumnType("timestamp")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .ValueGeneratedOnAddOrUpdate();
 
                 entity.Property(e => e.NguoiLapTheId).HasColumnType("int(10)");
 
@@ -198,6 +202,11 @@ namespace LiraryManagerment.model
                 entity.ToTable("loaisach");
 
                 entity.Property(e => e.Id).HasColumnType("int(10)");
+
+                entity.Property(e => e.KyHieu)
+                    .HasColumnType("varchar(10)")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.TenLoai)
                     .HasColumnType("varchar(255)")
@@ -406,12 +415,6 @@ namespace LiraryManagerment.model
                     .WithMany(p => p.Phieuthutienphat)
                     .HasForeignKey(d => d.DocGiaId)
                     .HasConstraintName("fk_phieuthutienphat_docgia");
-
-                entity.HasOne(d => d.IdNavigation)
-                    .WithOne(p => p.Phieuthutienphat)
-                    .HasForeignKey<Phieuthutienphat>(d => d.Id)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_phieuthutienphat_Sach");
 
                 entity.HasOne(d => d.NguoiThuNavigation)
                     .WithMany(p => p.Phieuthutienphat)

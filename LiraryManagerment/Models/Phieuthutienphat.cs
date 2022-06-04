@@ -5,7 +5,7 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.model
+namespace LiraryManagerment.Models
 {
     public partial class Phieuthutienphat
     {
@@ -19,7 +19,6 @@ namespace LiraryManagerment.model
         public ulong? DaXoa { get; set; }
 
         public virtual Docgia DocGia { get; set; }
-        public virtual Sach IdNavigation { get; set; }
         public virtual Nhanvien NguoiThuNavigation { get; set; }
     }
 }
