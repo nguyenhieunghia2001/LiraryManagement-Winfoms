@@ -10,9 +10,17 @@ namespace LiraryManagerment.Repositiorys
     {
         public List<Nhanvien> getAllStaff()
         {
-            using(var db = new heroku_c5dfe82f5ebcccfContext())
+            using (var db = new heroku_c5dfe82f5ebcccfContext())
             {
                 return db.Nhanvien.ToList();
+            }
+        }
+
+        public Nhanvien getStaffById(int id)
+        {
+            using (var db = new heroku_c5dfe82f5ebcccfContext())
+            {
+                return db.Nhanvien.Where(s => s.Id == id).FirstOrDefault();
             }
         }
     }
