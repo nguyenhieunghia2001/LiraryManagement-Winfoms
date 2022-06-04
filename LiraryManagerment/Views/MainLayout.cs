@@ -86,5 +86,10 @@ namespace WinFormsApp1.View
         {
             openChildForm(new CreateStaff());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ReturnBooks());
+        }
     }
 }
