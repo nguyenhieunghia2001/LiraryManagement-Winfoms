@@ -240,6 +240,7 @@ namespace WinFormsApp1.View
             this.btnAddBook.TabIndex = 2;
             this.btnAddBook.Text = "Tiếp Nhận Sách Mới";
             this.btnAddBook.UseVisualStyleBackColor = false;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // button2
             // 

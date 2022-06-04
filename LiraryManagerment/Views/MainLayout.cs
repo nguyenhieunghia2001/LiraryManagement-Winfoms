@@ -97,5 +97,20 @@ namespace WinFormsApp1.View
             activeSidrbar(sender);
             openChildForm(new LostBook(staffId));
         }
+
+        private void CreateReaderCard_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CreateReaderCard());
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ReciveNewBook());
+        }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CreateStaff());
+        }
     }
 }

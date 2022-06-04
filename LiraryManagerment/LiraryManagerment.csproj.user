@@ -4,6 +4,12 @@
     <Compile Update="Views\BorrowBook\BorrowBookView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\CreateReaderCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ListReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +17,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\MainLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ReciveNewBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\CreateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ReturnBooks.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
