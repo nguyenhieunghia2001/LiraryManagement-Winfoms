@@ -1,4 +1,4 @@
-﻿using LiraryManagerment.model;
+﻿using LiraryManagerment.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
