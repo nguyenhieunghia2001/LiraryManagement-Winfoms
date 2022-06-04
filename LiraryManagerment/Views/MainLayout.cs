@@ -100,17 +100,26 @@ namespace WinFormsApp1.View
 
         private void CreateReaderCard_Click(object sender, EventArgs e)
         {
+            activeSidrbar(sender);
             openChildForm(new CreateReaderCard());
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
+            activeSidrbar(sender);
             openChildForm(new ReciveNewBook());
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
+            activeSidrbar(sender);
             openChildForm(new CreateStaff());
+        }
+
+        private void btnCollectFines_Click(object sender, EventArgs e)
+        {
+            activeSidrbar(sender);
+            openChildForm(new CollectFines(staffId));
         }
     }
 }

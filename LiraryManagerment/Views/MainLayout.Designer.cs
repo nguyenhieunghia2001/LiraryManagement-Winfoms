@@ -37,7 +37,7 @@ namespace WinFormsApp1.View
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnLostBook = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCollectFines = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnBorrowBook = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -90,7 +90,7 @@ namespace WinFormsApp1.View
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.btnLostBook);
-            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.btnCollectFines);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.btnBorrowBook);
             this.panel3.Controls.Add(this.button4);
@@ -165,20 +165,21 @@ namespace WinFormsApp1.View
             this.btnLostBook.UseVisualStyleBackColor = false;
             this.btnLostBook.Click += new System.EventHandler(this.btnLostBook_Click);
             // 
-            // button6
+            // btnCollectFines
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(0, 301);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(279, 50);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Lập Phiếu Thu Tiền Phạt";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnCollectFines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnCollectFines.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCollectFines.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCollectFines.FlatAppearance.BorderSize = 0;
+            this.btnCollectFines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCollectFines.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCollectFines.Location = new System.Drawing.Point(0, 301);
+            this.btnCollectFines.Name = "btnCollectFines";
+            this.btnCollectFines.Size = new System.Drawing.Size(279, 50);
+            this.btnCollectFines.TabIndex = 5;
+            this.btnCollectFines.Text = "Lập Phiếu Thu Tiền Phạt";
+            this.btnCollectFines.UseVisualStyleBackColor = false;
+            this.btnCollectFines.Click += new System.EventHandler(this.btnCollectFines_Click);
             // 
             // button5
             // 
@@ -377,7 +378,7 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnLostBook;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCollectFines;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnAddBook;

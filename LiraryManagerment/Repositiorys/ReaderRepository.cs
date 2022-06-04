@@ -22,5 +22,13 @@ namespace LiraryManagerment.Repositiorys
                 return db.Docgia.Where(x => x.Email.ToLower().Contains(email.ToLower())).FirstOrDefault();
             }
         }
+        
+        public Docgia getReaderbyId(int id)
+        {
+            using (var db = new heroku_c5dfe82f5ebcccfContext())
+            {
+                return db.Docgia.Where(x => x.Id == id).FirstOrDefault();
+            }
+        }
     }
 }
