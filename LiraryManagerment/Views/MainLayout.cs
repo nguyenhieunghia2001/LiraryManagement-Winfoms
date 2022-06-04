@@ -81,5 +81,10 @@ namespace WinFormsApp1.View
         {
             openChildForm(new ReciveNewBook());
         }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CreateStaff());
+        }
     }
 }
