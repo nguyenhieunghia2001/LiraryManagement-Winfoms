@@ -44,7 +44,7 @@ namespace WinFormsApp1.View
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CreateReaderCard = new System.Windows.Forms.Button();
             this.btnAddStaff = new System.Windows.Forms.Button();
             this.pn_logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -99,7 +99,7 @@ namespace WinFormsApp1.View
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.btnAddBook);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.CreateReaderCard);
             this.panel3.Controls.Add(this.btnAddStaff);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -272,23 +272,24 @@ namespace WinFormsApp1.View
             this.btnAddBook.Size = new System.Drawing.Size(279, 50);
             this.btnAddBook.TabIndex = 2;
             this.btnAddBook.Text = "Tiếp Nhận Sách Mới";
-            this.btnAddBook.UseVisualStyleBackColor = false; 
+            this.btnAddBook.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // CreateReaderCard
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(0, 51);
-            this.button2.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Lập Thẻ Đọc Giả";
-            this.button2.UseVisualStyleBackColor = false;
+            this.CreateReaderCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.CreateReaderCard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CreateReaderCard.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.CreateReaderCard.FlatAppearance.BorderSize = 0;
+            this.CreateReaderCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateReaderCard.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CreateReaderCard.Location = new System.Drawing.Point(0, 51);
+            this.CreateReaderCard.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.CreateReaderCard.Name = "CreateReaderCard";
+            this.CreateReaderCard.Size = new System.Drawing.Size(279, 50);
+            this.CreateReaderCard.TabIndex = 1;
+            this.CreateReaderCard.Text = "Lập Thẻ Đọc Giả";
+            this.CreateReaderCard.UseVisualStyleBackColor = false;
+            this.CreateReaderCard.Click += new System.EventHandler(this.CreateReaderCard_Click);
             // 
             // btnAddStaff
             // 
@@ -305,7 +306,7 @@ namespace WinFormsApp1.View
             this.btnAddStaff.Size = new System.Drawing.Size(279, 51);
             this.btnAddStaff.TabIndex = 0;
             this.btnAddStaff.Text = "Tiếp nhận nhân viên";
-            this.btnAddStaff.UseVisualStyleBackColor = false; 
+            this.btnAddStaff.UseVisualStyleBackColor = false;
             // 
             // pn_logo
             // 
@@ -413,7 +414,7 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CreateReaderCard;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
