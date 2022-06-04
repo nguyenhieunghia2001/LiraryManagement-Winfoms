@@ -5,7 +5,7 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.model
+namespace LiraryManagerment.Models
 {
     public partial class Docgia
     {
@@ -25,6 +25,7 @@ namespace LiraryManagerment.model
         public string DiaChi { get; set; }
         public int? TienNo { get; set; }
         public DateTime NgayLapThe { get; set; }
+        public DateTime NgayTao { get; set; }
         public DateTime NgayChinhSua { get; set; }
         public ulong? TaoMoi { get; set; }
         public ulong? DaXoa { get; set; }

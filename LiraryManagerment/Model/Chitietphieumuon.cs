@@ -5,17 +5,15 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.model
+namespace LiraryManagerment.Models
 {
-    public partial class Chitietphieutra
+    public partial class Chitietphieumuon
     {
         public int Id { get; set; }
-        public int SachId { get; set; }
-        public int? SoNgayMuon { get; set; }
-        public int? TienPhat { get; set; }
-        public DateTime NgayMuon { get; set; }
+        public int? PhieuMuonId { get; set; }
+        public int? SachId { get; set; }
 
-        public virtual Phieutra IdNavigation { get; set; }
+        public virtual Phieumuon PhieuMuon { get; set; }
         public virtual Sach Sach { get; set; }
     }
 }
