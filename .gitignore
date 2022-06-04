@@ -14,6 +14,8 @@ TestResults
 *.sln.docstates
 /.vs
 .vs/
+.obj/
+.bin/
 # Build results
 [Dd]ebug/
 [Rr]elease/
