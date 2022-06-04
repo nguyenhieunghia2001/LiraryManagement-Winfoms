@@ -89,7 +89,7 @@ namespace WinFormsApp1.View
         private void btnLostBook_Click(object sender, EventArgs e)
         {
             var staff = staffRepo.getStaffById(staffId);
-            if(staff.BoPhan.ToLower() != "thủ thư")
+            if (staff.BoPhan.ToLower() != "thủ thư")
             {
                 MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
                 return;
@@ -120,6 +120,29 @@ namespace WinFormsApp1.View
         {
             activeSidrbar(sender);
             openChildForm(new CollectFines(staffId));
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            activeSidrbar(sender);
+            openChildForm(new HomeView(staffId));
+        }
+
+        private void MainLayout_Load(object sender, EventArgs e)
+        {
+            btnHome.BackColor = Color.FromArgb(130, 180, 255);
+            btnSelected.BackColor = Color.FromArgb(237, 237, 237);
+            btnSelected = btnHome;
+
+            var childForm = new HomeView(staffId);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using LiraryManagerment.Models;
 using LiraryManagerment.Repositiorys;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace LiraryManagerment.Views
         DataTable dtBooks = new DataTable();
         DataTable dtBookSelect = new DataTable();
         DataTable dtBookFilter = new DataTable();
+        BokkRepository bookRepo = new BokkRepository();
         int staffId;
 
         public BorrowBookView(int staffId)
@@ -44,9 +46,8 @@ namespace LiraryManagerment.Views
         }
 
         private void BorrowBookView_Load(object sender, EventArgs e)
-        {
-            var repo = new BokkRepository();
-            var books = repo.getAllBook();
+        { 
+            var books = bookRepo.getAllBook();
 
             var dt = tableBook();
             foreach (var book in books)
@@ -171,12 +172,22 @@ namespace LiraryManagerment.Views
 
                     for (var i = 0; i < dtBookSelect.Rows.Count; i++)
                     {
+                        var bookId = int.Parse(dtBookSelect.Rows[i]["Mã sách"].ToString());
                         var borrowDetail = new Chitietphieumuon();
                         borrowDetail.PhieuMuonId = borrow.Id;
-                        borrowDetail.SachId = int.Parse(dtBookSelect.Rows[i]["Mã sách"].ToString());
+                        borrowDetail.SachId = bookId;
                         db.Chitietphieumuon.Add(borrowDetail);
+
+                        //update lai số lượng sách 
+                        var book = bookRepo.getBookBuId(bookId);
+                        book.SoLuong = book.SoLuong - 1;
+
+                        db.Entry(book).State = EntityState.Modified;
                         db.SaveChanges();
                     }
+
+                    
+                    db.SaveChanges();
                 }
                 MessageBox.Show("Mượn sách thành công!");
             }

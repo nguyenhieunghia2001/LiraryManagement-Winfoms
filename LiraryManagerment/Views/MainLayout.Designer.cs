@@ -33,6 +33,7 @@ namespace WinFormsApp1.View
             this.pn_Left = new System.Windows.Forms.Panel();
             this.pn_menu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -97,11 +98,28 @@ namespace WinFormsApp1.View
             this.panel3.Controls.Add(this.btnAddBook);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnAddStaff);
+            this.panel3.Controls.Add(this.btnHome);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(279, 657);
             this.panel3.TabIndex = 0;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(279, 50);
+            this.btnHome.TabIndex = 14;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // button11
             // 
@@ -111,7 +129,7 @@ namespace WinFormsApp1.View
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.Location = new System.Drawing.Point(0, 501);
+            this.button11.Location = new System.Drawing.Point(0, 551);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(279, 50);
             this.button11.TabIndex = 13;
@@ -127,7 +145,7 @@ namespace WinFormsApp1.View
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(0, 451);
+            this.button9.Location = new System.Drawing.Point(0, 501);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(279, 50);
             this.button9.TabIndex = 8;
@@ -142,7 +160,7 @@ namespace WinFormsApp1.View
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(0, 401);
+            this.button8.Location = new System.Drawing.Point(0, 451);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(279, 50);
             this.button8.TabIndex = 7;
@@ -157,7 +175,7 @@ namespace WinFormsApp1.View
             this.btnLostBook.FlatAppearance.BorderSize = 0;
             this.btnLostBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLostBook.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLostBook.Location = new System.Drawing.Point(0, 351);
+            this.btnLostBook.Location = new System.Drawing.Point(0, 401);
             this.btnLostBook.Name = "btnLostBook";
             this.btnLostBook.Size = new System.Drawing.Size(279, 50);
             this.btnLostBook.TabIndex = 6;
@@ -173,7 +191,7 @@ namespace WinFormsApp1.View
             this.btnCollectFines.FlatAppearance.BorderSize = 0;
             this.btnCollectFines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCollectFines.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCollectFines.Location = new System.Drawing.Point(0, 301);
+            this.btnCollectFines.Location = new System.Drawing.Point(0, 351);
             this.btnCollectFines.Name = "btnCollectFines";
             this.btnCollectFines.Size = new System.Drawing.Size(279, 50);
             this.btnCollectFines.TabIndex = 5;
@@ -189,7 +207,7 @@ namespace WinFormsApp1.View
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(0, 251);
+            this.button5.Location = new System.Drawing.Point(0, 301);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(279, 50);
             this.button5.TabIndex = 4;
@@ -204,7 +222,7 @@ namespace WinFormsApp1.View
             this.btnBorrowBook.FlatAppearance.BorderSize = 0;
             this.btnBorrowBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrowBook.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBorrowBook.Location = new System.Drawing.Point(0, 201);
+            this.btnBorrowBook.Location = new System.Drawing.Point(0, 251);
             this.btnBorrowBook.Name = "btnBorrowBook";
             this.btnBorrowBook.Size = new System.Drawing.Size(279, 50);
             this.btnBorrowBook.TabIndex = 10;
@@ -220,7 +238,7 @@ namespace WinFormsApp1.View
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(0, 151);
+            this.button4.Location = new System.Drawing.Point(0, 201);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(279, 50);
             this.button4.TabIndex = 3;
@@ -235,7 +253,7 @@ namespace WinFormsApp1.View
             this.btnAddBook.FlatAppearance.BorderSize = 0;
             this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddBook.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddBook.Location = new System.Drawing.Point(0, 101);
+            this.btnAddBook.Location = new System.Drawing.Point(0, 151);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(279, 50);
             this.btnAddBook.TabIndex = 2;
@@ -251,7 +269,7 @@ namespace WinFormsApp1.View
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(0, 51);
+            this.button2.Location = new System.Drawing.Point(0, 101);
             this.button2.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(279, 50);
@@ -261,7 +279,7 @@ namespace WinFormsApp1.View
             // 
             // btnAddStaff
             // 
-            this.btnAddStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            this.btnAddStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.btnAddStaff.CausesValidation = false;
             this.btnAddStaff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddStaff.Dock = System.Windows.Forms.DockStyle.Top;
@@ -269,7 +287,7 @@ namespace WinFormsApp1.View
             this.btnAddStaff.FlatAppearance.BorderSize = 0;
             this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStaff.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddStaff.Location = new System.Drawing.Point(0, 0);
+            this.btnAddStaff.Location = new System.Drawing.Point(0, 50);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(279, 51);
             this.btnAddStaff.TabIndex = 0;
@@ -351,6 +369,7 @@ namespace WinFormsApp1.View
             this.Name = "MainLayout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainLayout";
+            this.Load += new System.EventHandler(this.MainLayout_Load);
             this.pn_Left.ResumeLayout(false);
             this.pn_menu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -386,5 +405,6 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button btnBorrowBook;
+        private System.Windows.Forms.Button btnHome;
     }
 }
