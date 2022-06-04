@@ -1,5 +1,6 @@
 ﻿using LiraryManagerment.Models;
 using LiraryManagerment.Repositiorys;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,6 +61,11 @@ namespace LiraryManagerment.Views.LostBook
                     lostBook.TienPhat = int.Parse(txtFine.Text);
                     lostBook.NgayGhiNhan = dtpkCreate.Value;
                     db.Matsach.Add(lostBook);
+
+                    var reader = readerRepo.getReaderbyId((int)cbbReader.SelectedValue);
+                    reader.TienNo = reader.TienNo + int.Parse(txtFine.Text);
+
+                    db.Entry(reader).State = EntityState.Modified;
                     db.SaveChanges();
 
                     MessageBox.Show("Ghi nhận mất sách thành công!");
