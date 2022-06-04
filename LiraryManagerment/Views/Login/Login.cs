@@ -51,7 +51,7 @@ namespace LiraryManagerment.Views.Login
             }
 
             this.Hide();
-            var mainLayout = new MainLayout();
+            var mainLayout = new MainLayout(user.Id);
             mainLayout.Show();  
         }
     }

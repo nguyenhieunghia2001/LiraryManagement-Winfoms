@@ -31,7 +31,6 @@
             this.grHeader = new System.Windows.Forms.GroupBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnDeletedSelectedAll = new System.Windows.Forms.Button();
             this.btnDeleteSelect = new System.Windows.Forms.Button();
             this.btnChoise = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -43,7 +42,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtChucVu = new System.Windows.Forms.TextBox();
+            this.txtDebt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -104,7 +103,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnDeletedSelectedAll);
             this.groupBox2.Controls.Add(this.btnDeleteSelect);
             this.groupBox2.Controls.Add(this.btnChoise);
             this.groupBox2.Controls.Add(this.btnSearch);
@@ -121,23 +119,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sách";
             // 
-            // btnDeletedSelectedAll
-            // 
-            this.btnDeletedSelectedAll.Location = new System.Drawing.Point(584, 32);
-            this.btnDeletedSelectedAll.Name = "btnDeletedSelectedAll";
-            this.btnDeletedSelectedAll.Size = new System.Drawing.Size(99, 29);
-            this.btnDeletedSelectedAll.TabIndex = 12;
-            this.btnDeletedSelectedAll.Text = "Xóa tất cả";
-            this.btnDeletedSelectedAll.UseVisualStyleBackColor = true;
-            // 
             // btnDeleteSelect
             // 
-            this.btnDeleteSelect.Location = new System.Drawing.Point(485, 33);
+            this.btnDeleteSelect.Location = new System.Drawing.Point(590, 29);
             this.btnDeleteSelect.Name = "btnDeleteSelect";
             this.btnDeleteSelect.Size = new System.Drawing.Size(93, 29);
             this.btnDeleteSelect.TabIndex = 11;
             this.btnDeleteSelect.Text = "Xóa";
             this.btnDeleteSelect.UseVisualStyleBackColor = true;
+            this.btnDeleteSelect.Click += new System.EventHandler(this.btnDeleteSelect_Click);
             // 
             // btnChoise
             // 
@@ -151,16 +141,17 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(623, 363);
+            this.btnSearch.Location = new System.Drawing.Point(623, 370);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(60, 29);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(374, 365);
+            this.txtSearch.Location = new System.Drawing.Point(385, 373);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Tên sách, tên tác giả";
             this.txtSearch.Size = new System.Drawing.Size(232, 27);
@@ -170,7 +161,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(12, 367);
+            this.label10.Location = new System.Drawing.Point(12, 372);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(199, 28);
             this.label10.TabIndex = 5;
@@ -241,10 +232,11 @@
             this.btnSubmit.TabIndex = 9;
             this.btnSubmit.Text = "Xác nhận";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.txtChucVu);
+            this.panel9.Controls.Add(this.txtDebt);
             this.panel9.Controls.Add(this.label8);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(3, 462);
@@ -252,22 +244,22 @@
             this.panel9.Size = new System.Drawing.Size(268, 79);
             this.panel9.TabIndex = 8;
             // 
-            // txtChucVu
+            // txtDebt
             // 
-            this.txtChucVu.Location = new System.Drawing.Point(17, 40);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.ReadOnly = true;
-            this.txtChucVu.Size = new System.Drawing.Size(242, 27);
-            this.txtChucVu.TabIndex = 1;
+            this.txtDebt.Location = new System.Drawing.Point(17, 40);
+            this.txtDebt.Name = "txtDebt";
+            this.txtDebt.ReadOnly = true;
+            this.txtDebt.Size = new System.Drawing.Size(242, 27);
+            this.txtDebt.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(17, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 20);
+            this.label8.Size = new System.Drawing.Size(58, 20);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Chức vụ";
+            this.label8.Text = "Tiền nợ";
             // 
             // panel8
             // 
@@ -462,11 +454,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 41);
+            this.label1.Location = new System.Drawing.Point(3, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SĐT:";
+            this.label1.Text = "Email";
             // 
             // BorrowBookView
             // 
@@ -513,7 +505,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txtChucVu;
+        private System.Windows.Forms.TextBox txtDebt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtAddress;
@@ -545,7 +537,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgBookList;
         private System.Windows.Forms.Button btnChoise;
-        private System.Windows.Forms.Button btnDeletedSelectedAll;
         private System.Windows.Forms.Button btnDeleteSelect;
     }
 }
