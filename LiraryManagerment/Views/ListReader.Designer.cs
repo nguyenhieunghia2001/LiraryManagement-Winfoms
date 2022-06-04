@@ -37,6 +37,7 @@
             // 
             this.dgv_ListReader.AllowUserToAddRows = false;
             this.dgv_ListReader.AllowUserToDeleteRows = false;
+            this.dgv_ListReader.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ListReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ListReader.Location = new System.Drawing.Point(12, 160);
             this.dgv_ListReader.Name = "dgv_ListReader";

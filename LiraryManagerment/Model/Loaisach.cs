@@ -16,6 +16,7 @@ namespace LiraryManagerment.Models
 
         public int Id { get; set; }
         public string TenLoai { get; set; }
+        public string KyHieu { get; set; }
 
         public virtual ICollection<Sach> Sach { get; set; }
     }
