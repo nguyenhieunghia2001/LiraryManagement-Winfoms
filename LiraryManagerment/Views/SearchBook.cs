@@ -28,10 +28,6 @@ namespace LiraryManagerment.Views
 
                 cbb_TheLoai.DataSource = loaisaches;
                 cbb_TheLoai.DisplayMember = "TenLoai";
-
-               
-
-
             }
             bindingSaches(saches);
 
@@ -64,7 +60,7 @@ namespace LiraryManagerment.Views
                 {
                     loaisach = db.Loaisach.Where(a => a.Id == sach.LoaiSachId).FirstOrDefault();
                     tinhtrangsach = db.Tinhtrangsach.Where(s => s.Id == sach.TinhTrangId).FirstOrDefault();
-                    table.Rows.Add(i++, loaisach.Id + sach.Id, sach.TenSach,
+                    table.Rows.Add(i++, sach.Id, sach.TenSach,
                         loaisach.TenLoai, sach.TacGia, tinhtrangsach.Ten);
                 }
             }

@@ -50,7 +50,7 @@ namespace LiraryManagerment.Views
                 {
                     loaisach = db.Loaisach.Where(a => a.Id == sach.LoaiSachId).FirstOrDefault();
                     tinhtrangsach = db.Tinhtrangsach.Where(s => s.Id == sach.TinhTrangId).FirstOrDefault();
-                    table.Rows.Add(i++, loaisach.Id + sach.Id, sach.TenSach,
+                    table.Rows.Add(i++, sach.Id, sach.TenSach,
                         loaisach.TenLoai, sach.TacGia, tinhtrangsach.Ten);
                 }
             }
@@ -73,25 +73,31 @@ namespace LiraryManagerment.Views
                 thanhlysach.LyDo = tb_LyDo.Text;
                 thanhlysach.NgayThanhLy = dtp_NgayThanhLy.Value;
                 thanhlysach.IdNhanVien = ((Nhanvien)cbb_NhanVien.SelectedItem).Id;
-                var entity = db.Thanhlysach;
-                entity.Add(thanhlysach);
+                var entity = db.Thanhlysach.Add(thanhlysach);
                 db.SaveChanges();
                 Chitietthanhlysach chitietthanhlysach;
 
-                var entity2 = db.Chitietthanhlysach;
-                List<Chitietthanhlysach> chitietthanhlysaches = new List<Chitietthanhlysach>();
                 foreach (DataGridViewRow row in dgv_Sach.SelectedRows)
                 {
                     chitietthanhlysach = new Chitietthanhlysach();
                     chitietthanhlysach.ThanhLySachId = thanhlysach.Id;
-                    chitietthanhlysach.ThanhLySach = thanhlysach;
-                    chitietthanhlysach.SachId = Int32.Parse(row.Cells["Mã sách"].Value.ToString().Substring(2));
-                    chitietthanhlysaches.Add(chitietthanhlysach);
+                    chitietthanhlysach.SachId = int.Parse(row.Cells["Mã sách"].Value.ToString());
+                    db.Chitietthanhlysach.Add(chitietthanhlysach);
+                    db.SaveChanges();
                 }
-                entity2.AddRange(chitietthanhlysaches);
-                db.SaveChanges();
             }
 
+            string message = "Lưu Thông Tin Thành Công";
+            MessageBoxButtons messageButton = MessageBoxButtons.OK;
+            DialogResult result = MessageBox.Show(message, "Thông Báo", messageButton);
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            tb_SearchText.Text = "";
+            tb_LyDo.Text = "";
+            cbb_NhanVien.SelectedIndex = 0;
+            dtp_NgayThanhLy.Value = DateTime.Now;
         }
     }
 }

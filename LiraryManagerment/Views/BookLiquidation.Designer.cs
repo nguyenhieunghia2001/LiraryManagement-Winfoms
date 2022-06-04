@@ -82,6 +82,8 @@
             // 
             // dgv_Sach
             // 
+            this.dgv_Sach.AllowUserToAddRows = false;
+            this.dgv_Sach.AllowUserToDeleteRows = false;
             this.dgv_Sach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Sach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Sach.Location = new System.Drawing.Point(49, 182);
@@ -89,6 +91,7 @@
             this.dgv_Sach.ReadOnly = true;
             this.dgv_Sach.RowHeadersWidth = 51;
             this.dgv_Sach.RowTemplate.Height = 29;
+            this.dgv_Sach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Sach.Size = new System.Drawing.Size(861, 188);
             this.dgv_Sach.TabIndex = 4;
             // 
@@ -151,6 +154,7 @@
             this.btn_Cancel.TabIndex = 12;
             this.btn_Cancel.Text = "Hủy";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // cbb_NhanVien
             // 
