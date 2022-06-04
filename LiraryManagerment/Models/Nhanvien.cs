@@ -5,15 +5,17 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.Models
+namespace LiraryManagerment.model
 {
     public partial class Nhanvien
     {
         public Nhanvien()
         {
+            Docgia = new HashSet<Docgia>();
             Matsach = new HashSet<Matsach>();
             Phieumuon = new HashSet<Phieumuon>();
             Phieuthutienphat = new HashSet<Phieuthutienphat>();
+            Sach = new HashSet<Sach>();
         }
 
         public int Id { get; set; }
@@ -32,8 +34,10 @@ namespace LiraryManagerment.Models
         public ulong? DaXoa { get; set; }
 
         public virtual Chitietthanhlysach Chitietthanhlysach { get; set; }
+        public virtual ICollection<Docgia> Docgia { get; set; }
         public virtual ICollection<Matsach> Matsach { get; set; }
         public virtual ICollection<Phieumuon> Phieumuon { get; set; }
         public virtual ICollection<Phieuthutienphat> Phieuthutienphat { get; set; }
+        public virtual ICollection<Sach> Sach { get; set; }
     }
 }

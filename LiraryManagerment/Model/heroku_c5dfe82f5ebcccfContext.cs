@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.model
+namespace LiraryManagerment.Models
 {
     public partial class heroku_c5dfe82f5ebcccfContext : DbContext
     {
@@ -172,7 +172,7 @@ namespace LiraryManagerment.model
                     .HasColumnType("timestamp")
                     .HasDefaultValueSql("'0000-00-00 00:00:00'");
 
-                entity.Property(e => e.NgayLapThe)
+                entity.Property(e => e.NgayTao)
                     .HasColumnType("timestamp")
                     .HasDefaultValueSql("CURRENT_TIMESTAMP")
                     .ValueGeneratedOnAddOrUpdate();

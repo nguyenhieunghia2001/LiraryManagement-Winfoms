@@ -37,7 +37,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_HoTen = new System.Windows.Forms.TextBox();
-            this.tb_NguoiLap = new System.Windows.Forms.TextBox();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.cbb_LoaiDocGia = new System.Windows.Forms.ComboBox();
             this.dtp_NgayLapThe = new System.Windows.Forms.DateTimePicker();
@@ -46,6 +45,7 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.listDocGia = new System.Windows.Forms.LinkLabel();
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.cbb_NguoiLap = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -137,14 +137,6 @@
             this.tb_HoTen.Size = new System.Drawing.Size(293, 34);
             this.tb_HoTen.TabIndex = 8;
             // 
-            // tb_NguoiLap
-            // 
-            this.tb_NguoiLap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_NguoiLap.Location = new System.Drawing.Point(635, 214);
-            this.tb_NguoiLap.Name = "tb_NguoiLap";
-            this.tb_NguoiLap.Size = new System.Drawing.Size(293, 34);
-            this.tb_NguoiLap.TabIndex = 9;
-            // 
             // tb_Email
             // 
             this.tb_Email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -220,11 +212,22 @@
             this.dtp_NgaySinh.Size = new System.Drawing.Size(293, 30);
             this.dtp_NgaySinh.TabIndex = 18;
             // 
+            // cbb_NguoiLap
+            // 
+            this.cbb_NguoiLap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_NguoiLap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbb_NguoiLap.FormattingEnabled = true;
+            this.cbb_NguoiLap.Location = new System.Drawing.Point(635, 217);
+            this.cbb_NguoiLap.Name = "cbb_NguoiLap";
+            this.cbb_NguoiLap.Size = new System.Drawing.Size(293, 36);
+            this.cbb_NguoiLap.TabIndex = 19;
+            // 
             // CreateReaderCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 754);
+            this.Controls.Add(this.cbb_NguoiLap);
             this.Controls.Add(this.dtp_NgaySinh);
             this.Controls.Add(this.listDocGia);
             this.Controls.Add(this.btn_cancel);
@@ -233,7 +236,6 @@
             this.Controls.Add(this.dtp_NgayLapThe);
             this.Controls.Add(this.cbb_LoaiDocGia);
             this.Controls.Add(this.tb_Email);
-            this.Controls.Add(this.tb_NguoiLap);
             this.Controls.Add(this.tb_HoTen);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -262,7 +264,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_HoTen;
-        private System.Windows.Forms.TextBox tb_NguoiLap;
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.ComboBox cbb_LoaiDocGia;
         private System.Windows.Forms.DateTimePicker dtp_NgayLapThe;
@@ -271,5 +272,6 @@
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.LinkLabel listDocGia;
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
+        private System.Windows.Forms.ComboBox cbb_NguoiLap;
     }
 }

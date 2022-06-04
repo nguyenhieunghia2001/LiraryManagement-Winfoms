@@ -76,5 +76,10 @@ namespace WinFormsApp1.View
         {
             openChildForm(new CreateReaderCard());
         }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ReciveNewBook());
+        }
     }
 }

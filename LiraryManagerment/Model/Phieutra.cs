@@ -5,27 +5,23 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace LiraryManagerment.model
+namespace LiraryManagerment.Models
 {
-    public partial class Phieumuon
+    public partial class Phieutra
     {
-        public Phieumuon()
+        public Phieutra()
         {
-            Chitietphieumuon = new HashSet<Chitietphieumuon>();
+            Chitietphieutra = new HashSet<Chitietphieutra>();
         }
 
         public int Id { get; set; }
-        public int? NhanVienId { get; set; }
         public int? DocGiaId { get; set; }
-        public int? SoLuong { get; set; }
-        public int? DonGia { get; set; }
-        public DateTime NgayMuon { get; set; }
+        public DateTime NgayTra { get; set; }
         public DateTime NgayChinhSua { get; set; }
         public ulong? TaoMoi { get; set; }
         public ulong? DaXoa { get; set; }
 
         public virtual Docgia DocGia { get; set; }
-        public virtual Nhanvien NhanVien { get; set; }
-        public virtual ICollection<Chitietphieumuon> Chitietphieumuon { get; set; }
+        public virtual ICollection<Chitietphieutra> Chitietphieutra { get; set; }
     }
 }
