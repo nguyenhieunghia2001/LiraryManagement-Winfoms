@@ -38,7 +38,7 @@ namespace LiraryManagerment.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySql("server=us-cdbr-east-05.cleardb.net;database=heroku_c5dfe82f5ebcccf;uid=bd4dc92e1131a3;pwd=36285360", x => x.ServerVersion("5.6.50-mysql"));
+                optionsBuilder.UseMySql("server=us-cdbr-east-05.cleardb.net;database=heroku_c5dfe82f5ebcccf;uid=bd4dc92e1131a3;pwd=36285360;Convert Zero Datetime=True", x => x.ServerVersion("5.6.50-mysql"));
             }
         }
 
