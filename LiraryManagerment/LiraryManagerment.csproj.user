@@ -1,19 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Views\BorrowBookView.cs">
+    <Compile Update="Views\BookLiquidation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\BorrowBook\BorrowBookView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\CollectFines.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\CreateReaderCard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\CreateStaff.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\ListReader.cs">
@@ -31,7 +25,13 @@
     <Compile Update="Views\ReciveNewBook.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\CreateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\ReturnBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\SearchBook.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
