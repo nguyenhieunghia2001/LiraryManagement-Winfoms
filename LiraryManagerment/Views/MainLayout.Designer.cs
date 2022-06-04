@@ -272,8 +272,7 @@ namespace WinFormsApp1.View
             this.btnAddBook.Size = new System.Drawing.Size(279, 50);
             this.btnAddBook.TabIndex = 2;
             this.btnAddBook.Text = "Tiếp Nhận Sách Mới";
-            this.btnAddBook.UseVisualStyleBackColor = false;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            this.btnAddBook.UseVisualStyleBackColor = false; 
             // 
             // button2
             // 
@@ -306,8 +305,7 @@ namespace WinFormsApp1.View
             this.btnAddStaff.Size = new System.Drawing.Size(279, 51);
             this.btnAddStaff.TabIndex = 0;
             this.btnAddStaff.Text = "Tiếp nhận nhân viên";
-            this.btnAddStaff.UseVisualStyleBackColor = false;
-            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            this.btnAddStaff.UseVisualStyleBackColor = false; 
             // 
             // pn_logo
             // 

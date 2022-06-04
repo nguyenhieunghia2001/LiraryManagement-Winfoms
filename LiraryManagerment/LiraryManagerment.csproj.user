@@ -4,13 +4,7 @@
     <Compile Update="Views\BorrowBookView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\LoginPage.cs">
+    <Compile Update="Views\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\MainLayout.cs">

@@ -45,11 +45,6 @@ namespace WinFormsApp1.View
         {
 
         }
-
-        private void btnAddStaff_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form1());
-        }
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -63,11 +58,6 @@ namespace WinFormsApp1.View
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();   
-        }
-
-        private void btnAddBook_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form2());
         }
 
         private void button11_Click(object sender, EventArgs e)
