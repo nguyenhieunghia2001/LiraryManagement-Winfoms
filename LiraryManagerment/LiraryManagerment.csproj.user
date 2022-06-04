@@ -13,6 +13,9 @@
     <Compile Update="Views\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\LostBook\LostBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\MainLayout.cs">
       <SubType>Form</SubType>
     </Compile>
