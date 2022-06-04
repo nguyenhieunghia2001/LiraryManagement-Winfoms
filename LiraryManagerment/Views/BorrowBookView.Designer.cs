@@ -57,7 +57,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.grHeader.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -67,6 +72,10 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // grHeader
@@ -91,10 +100,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel10);
+            this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(0, 59);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(659, 695);
+            this.groupBox2.Size = new System.Drawing.Size(689, 695);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -108,9 +119,9 @@
             this.groupBox3.Controls.Add(this.panel3);
             this.groupBox3.Controls.Add(this.panel2);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(659, 59);
+            this.groupBox3.Location = new System.Drawing.Point(689, 59);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(304, 695);
+            this.groupBox3.Size = new System.Drawing.Size(274, 695);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kiểm tra thông tin đọc giả";
@@ -122,7 +133,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(3, 462);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(298, 79);
+            this.panel9.Size = new System.Drawing.Size(268, 79);
             this.panel9.TabIndex = 8;
             // 
             // textBox8
@@ -130,7 +141,7 @@
             this.textBox8.Location = new System.Drawing.Point(17, 40);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(274, 27);
+            this.textBox8.Size = new System.Drawing.Size(242, 27);
             this.textBox8.TabIndex = 1;
             // 
             // label8
@@ -149,7 +160,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(3, 383);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(298, 79);
+            this.panel8.Size = new System.Drawing.Size(268, 79);
             this.panel8.TabIndex = 8;
             // 
             // textBox7
@@ -157,7 +168,7 @@
             this.textBox7.Location = new System.Drawing.Point(17, 40);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(274, 27);
+            this.textBox7.Size = new System.Drawing.Size(242, 27);
             this.textBox7.TabIndex = 1;
             // 
             // label7
@@ -176,7 +187,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(3, 304);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(298, 79);
+            this.panel7.Size = new System.Drawing.Size(268, 79);
             this.panel7.TabIndex = 8;
             // 
             // textBox6
@@ -184,7 +195,7 @@
             this.textBox6.Location = new System.Drawing.Point(17, 40);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(274, 27);
+            this.textBox6.Size = new System.Drawing.Size(242, 27);
             this.textBox6.TabIndex = 1;
             // 
             // label6
@@ -203,7 +214,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(3, 225);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(298, 79);
+            this.panel6.Size = new System.Drawing.Size(268, 79);
             this.panel6.TabIndex = 7;
             // 
             // textBox5
@@ -211,7 +222,7 @@
             this.textBox5.Location = new System.Drawing.Point(17, 40);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(274, 27);
+            this.textBox5.Size = new System.Drawing.Size(242, 27);
             this.textBox5.TabIndex = 1;
             // 
             // label5
@@ -231,7 +242,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 146);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(298, 79);
+            this.panel3.Size = new System.Drawing.Size(268, 79);
             this.panel3.TabIndex = 4;
             // 
             // panel4
@@ -242,7 +253,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(298, 79);
+            this.panel4.Size = new System.Drawing.Size(268, 79);
             this.panel4.TabIndex = 5;
             // 
             // panel5
@@ -252,7 +263,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(298, 79);
+            this.panel5.Size = new System.Drawing.Size(268, 79);
             this.panel5.TabIndex = 6;
             // 
             // textBox4
@@ -260,7 +271,7 @@
             this.textBox4.Location = new System.Drawing.Point(17, 40);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(274, 27);
+            this.textBox4.Size = new System.Drawing.Size(242, 27);
             this.textBox4.TabIndex = 1;
             // 
             // label4
@@ -312,21 +323,21 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(298, 123);
+            this.panel2.Size = new System.Drawing.Size(268, 123);
             this.panel2.TabIndex = 3;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 36);
+            this.textBox1.Location = new System.Drawing.Point(53, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 27);
+            this.textBox1.Size = new System.Drawing.Size(206, 27);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(197, 69);
+            this.button1.Location = new System.Drawing.Point(188, 78);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(71, 29);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -334,11 +345,51 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 43);
+            this.label1.Location = new System.Drawing.Point(8, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "SĐT:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(683, 269);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.dataGridView1);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 292);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(683, 400);
+            this.panel10.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(683, 400);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 29;
+            this.dataGridView2.Size = new System.Drawing.Size(683, 269);
+            this.dataGridView2.TabIndex = 0;
             // 
             // BorrowBookView
             // 
@@ -352,6 +403,7 @@
             this.Text = "BorrowBookView";
             this.grHeader.ResumeLayout(false);
             this.grHeader.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -369,6 +421,10 @@
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,5 +460,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

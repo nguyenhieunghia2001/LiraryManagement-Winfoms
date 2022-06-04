@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\LTDH-HK1\\NMPM\\TestProj\\WinFormsApp1\\LiraryManagerment\\LiraryManagerment.csproj": {}
+    "F:\\LTDH-HK1\\NMPM\\LiraryManagement-Winfoms\\LiraryManagerment\\LiraryManagerment.csproj": {}
   },
   "projects": {
-    "F:\\LTDH-HK1\\NMPM\\TestProj\\WinFormsApp1\\LiraryManagerment\\LiraryManagerment.csproj": {
+    "F:\\LTDH-HK1\\NMPM\\LiraryManagement-Winfoms\\LiraryManagerment\\LiraryManagerment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\LTDH-HK1\\NMPM\\TestProj\\WinFormsApp1\\LiraryManagerment\\LiraryManagerment.csproj",
+        "projectUniqueName": "F:\\LTDH-HK1\\NMPM\\LiraryManagement-Winfoms\\LiraryManagerment\\LiraryManagerment.csproj",
         "projectName": "LiraryManagerment",
-        "projectPath": "F:\\LTDH-HK1\\NMPM\\TestProj\\WinFormsApp1\\LiraryManagerment\\LiraryManagerment.csproj",
+        "projectPath": "F:\\LTDH-HK1\\NMPM\\LiraryManagement-Winfoms\\LiraryManagerment\\LiraryManagerment.csproj",
         "packagesPath": "C:\\Users\\nghiadx\\.nuget\\packages\\",
-        "outputPath": "F:\\LTDH-HK1\\NMPM\\TestProj\\WinFormsApp1\\LiraryManagerment\\obj\\",
+        "outputPath": "F:\\LTDH-HK1\\NMPM\\LiraryManagement-Winfoms\\LiraryManagerment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nghiadx\\AppData\\Roaming\\NuGet\\NuGet.Config",

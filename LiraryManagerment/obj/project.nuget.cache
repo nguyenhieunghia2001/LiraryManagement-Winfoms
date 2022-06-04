@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TzP5hXoHYScl2UCsbMdgZkTOvqgZTtuLtU0qh8VA+SJZ3pCHe3mjA5guULA69meKqnAiop1ZdmzhuyyUVGQsSQ==",
+  "dgSpecHash": "JLM3eg7tjT122KEMdyKGcPHt+8z/UOjOHyvIIU8yTktfDxA55JH35v00gSviUD4/AhYdMFvRxjIoSqv/8dwypQ==",
   "success": true,
-  "projectFilePath": "F:\\LTDH-HK1\\NMPM\\TestProj\\WinFormsApp1\\LiraryManagerment\\LiraryManagerment.csproj",
+  "projectFilePath": "F:\\LTDH-HK1\\NMPM\\LiraryManagement-Winfoms\\LiraryManagerment\\LiraryManagerment.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nghiadx\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\nghiadx\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
