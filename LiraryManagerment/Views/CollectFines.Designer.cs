@@ -120,7 +120,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 25);
             this.label8.TabIndex = 30;
-            this.label8.Text = "Họ tên đọc giả";
+            this.label8.Text = "Họ tên độc giả";
             // 
             // txtMoneyReceive
             // 

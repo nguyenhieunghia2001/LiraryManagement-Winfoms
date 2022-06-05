@@ -259,7 +259,7 @@ namespace WinFormsApp1.View
             this.btnCreateReaderCard.Name = "btnCreateReaderCard";
             this.btnCreateReaderCard.Size = new System.Drawing.Size(279, 50);
             this.btnCreateReaderCard.TabIndex = 1;
-            this.btnCreateReaderCard.Text = "Lập Thẻ Đọc Giả";
+            this.btnCreateReaderCard.Text = "Lập Thẻ Độc Giả";
             this.btnCreateReaderCard.UseVisualStyleBackColor = false;
             this.btnCreateReaderCard.Click += new System.EventHandler(this.btnCreateReaderCard_Click);
             // 
