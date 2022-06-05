@@ -62,16 +62,16 @@ namespace WinFormsApp1.View
             }
             activeSidrbar(sender);
             openChildForm(new LostBook(staffId));
-        }
-
-        private void CreateReaderCard_Click(object sender, EventArgs e)
-        {
-            activeSidrbar(sender);
-            openChildForm(new CreateReaderCard());
-        }
+        } 
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ kho")
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
             openChildForm(new ReciveNewBook());
         }
@@ -84,6 +84,12 @@ namespace WinFormsApp1.View
 
         private void btnCollectFines_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ quỷ")
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
             openChildForm(new CollectFines(staffId));
         }
@@ -126,6 +132,12 @@ namespace WinFormsApp1.View
 
         private void btnCreateReaderCard_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ thư")
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
             openChildForm(new CreateReaderCard());
         }
@@ -144,6 +156,12 @@ namespace WinFormsApp1.View
 
         private void btnLiquidation_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ kho")
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
             openChildForm(new BookLiquidation());
         }

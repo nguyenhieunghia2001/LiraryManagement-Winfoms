@@ -115,6 +115,7 @@
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtName.Location = new System.Drawing.Point(301, 405);
             this.txtName.Name = "txtName";
@@ -124,6 +125,7 @@
             // 
             // txtBOD
             // 
+            this.txtBOD.Enabled = false;
             this.txtBOD.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBOD.Location = new System.Drawing.Point(301, 472);
             this.txtBOD.Name = "txtBOD";
@@ -133,6 +135,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.Enabled = false;
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtAddress.Location = new System.Drawing.Point(301, 541);
             this.txtAddress.Name = "txtAddress";
@@ -142,6 +145,7 @@
             // 
             // txtPosition
             // 
+            this.txtPosition.Enabled = false;
             this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPosition.Location = new System.Drawing.Point(301, 618);
             this.txtPosition.Name = "txtPosition";
