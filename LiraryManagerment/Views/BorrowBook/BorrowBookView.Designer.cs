@@ -222,7 +222,7 @@
             this.groupBox3.Size = new System.Drawing.Size(274, 736);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Kiểm tra thông tin đọc giả";
+            this.groupBox3.Text = "Kiểm tra thông tin độc giả";
             // 
             // btnSubmit
             // 
@@ -389,7 +389,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "ID đọc giả";
+            this.label4.Text = "ID độc giả";
             // 
             // textBox3
             // 

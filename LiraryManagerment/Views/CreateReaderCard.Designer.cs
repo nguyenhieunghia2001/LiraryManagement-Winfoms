@@ -33,7 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_HoTen = new System.Windows.Forms.TextBox();
@@ -45,7 +44,8 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.listDocGia = new System.Windows.Forms.LinkLabel();
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.cbb_NguoiLap = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_NguoiLap = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +56,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thẻ Đọc Giả";
+            this.label1.Text = "Thẻ Độc Giả";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -98,16 +98,6 @@
             this.label5.Size = new System.Drawing.Size(74, 28);
             this.label5.TabIndex = 4;
             this.label5.Text = "Địa Chỉ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(500, 217);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 28);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Người Lập";
             // 
             // label7
             // 
@@ -212,22 +202,30 @@
             this.dtp_NgaySinh.Size = new System.Drawing.Size(293, 30);
             this.dtp_NgaySinh.TabIndex = 18;
             // 
-            // cbb_NguoiLap
+            // label6
             // 
-            this.cbb_NguoiLap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_NguoiLap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbb_NguoiLap.FormattingEnabled = true;
-            this.cbb_NguoiLap.Location = new System.Drawing.Point(635, 217);
-            this.cbb_NguoiLap.Name = "cbb_NguoiLap";
-            this.cbb_NguoiLap.Size = new System.Drawing.Size(293, 36);
-            this.cbb_NguoiLap.TabIndex = 19;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(500, 217);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 28);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Người Lập";
+            // 
+            // tb_NguoiLap
+            // 
+            this.tb_NguoiLap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_NguoiLap.Location = new System.Drawing.Point(635, 217);
+            this.tb_NguoiLap.Name = "tb_NguoiLap";
+            this.tb_NguoiLap.Size = new System.Drawing.Size(285, 34);
+            this.tb_NguoiLap.TabIndex = 19;
             // 
             // CreateReaderCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 754);
-            this.Controls.Add(this.cbb_NguoiLap);
+            this.Controls.Add(this.tb_NguoiLap);
             this.Controls.Add(this.dtp_NgaySinh);
             this.Controls.Add(this.listDocGia);
             this.Controls.Add(this.btn_cancel);
@@ -260,7 +258,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_HoTen;
@@ -272,6 +269,7 @@
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.LinkLabel listDocGia;
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
-        private System.Windows.Forms.ComboBox cbb_NguoiLap;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_NguoiLap;
     }
 }

@@ -37,7 +37,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbb_NguoiTiepNhan = new System.Windows.Forms.ComboBox();
             this.tb_TenSach = new System.Windows.Forms.TextBox();
             this.tb_TacGia = new System.Windows.Forms.TextBox();
             this.tb_NhaXuatBan = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tb_SoLuong = new System.Windows.Forms.TextBox();
             this.cbb_LoaiSach = new System.Windows.Forms.ComboBox();
+            this.tb_NguoiTiepNhan = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -140,16 +140,6 @@
             this.label9.Size = new System.Drawing.Size(162, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "Người Tiếp Nhận";
-            // 
-            // cbb_NguoiTiepNhan
-            // 
-            this.cbb_NguoiTiepNhan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_NguoiTiepNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbb_NguoiTiepNhan.FormattingEnabled = true;
-            this.cbb_NguoiTiepNhan.Location = new System.Drawing.Point(664, 427);
-            this.cbb_NguoiTiepNhan.Name = "cbb_NguoiTiepNhan";
-            this.cbb_NguoiTiepNhan.Size = new System.Drawing.Size(280, 36);
-            this.cbb_NguoiTiepNhan.TabIndex = 9;
             // 
             // tb_TenSach
             // 
@@ -249,11 +239,21 @@
             this.cbb_LoaiSach.Size = new System.Drawing.Size(280, 36);
             this.cbb_LoaiSach.TabIndex = 22;
             // 
+            // tb_NguoiTiepNhan
+            // 
+            this.tb_NguoiTiepNhan.Enabled = false;
+            this.tb_NguoiTiepNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_NguoiTiepNhan.Location = new System.Drawing.Point(664, 428);
+            this.tb_NguoiTiepNhan.Name = "tb_NguoiTiepNhan";
+            this.tb_NguoiTiepNhan.Size = new System.Drawing.Size(268, 34);
+            this.tb_NguoiTiepNhan.TabIndex = 23;
+            // 
             // ReciveNewBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 754);
+            this.Controls.Add(this.tb_NguoiTiepNhan);
             this.Controls.Add(this.cbb_LoaiSach);
             this.Controls.Add(this.tb_SoLuong);
             this.Controls.Add(this.label3);
@@ -265,7 +265,6 @@
             this.Controls.Add(this.tb_NhaXuatBan);
             this.Controls.Add(this.tb_TacGia);
             this.Controls.Add(this.tb_TenSach);
-            this.Controls.Add(this.cbb_NguoiTiepNhan);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -294,7 +293,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbb_NguoiTiepNhan;
         private System.Windows.Forms.TextBox tb_TenSach;
         private System.Windows.Forms.TextBox tb_TacGia;
         private System.Windows.Forms.TextBox tb_NhaXuatBan;
@@ -306,5 +304,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_SoLuong;
         private System.Windows.Forms.ComboBox cbb_LoaiSach;
+        private System.Windows.Forms.TextBox tb_NguoiTiepNhan;
     }
 }

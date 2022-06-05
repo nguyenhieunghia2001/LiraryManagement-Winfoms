@@ -17,11 +17,15 @@ namespace WinFormsApp1.View
         int staffId;
         StaffRepository staffRepo = new StaffRepository();
         Button btnSelected = new Button();
+        bool isFullPer = false;
         public MainLayout(int StaffId)
         {
             staffId = StaffId;
             InitializeComponent();
             btnSelected = btnAddStaff;
+
+            var staff = staffRepo.getStaffById(staffId);
+            isFullPer = staff.BoPhan.ToLower() == "ban giám đốc" ? true : false;
         }
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -55,7 +59,7 @@ namespace WinFormsApp1.View
         private void btnLostBook_Click(object sender, EventArgs e)
         {
             var staff = staffRepo.getStaffById(staffId);
-            if (staff.BoPhan.ToLower() != "thủ thư")
+            if (staff.BoPhan.ToLower() != "thủ thư" && !isFullPer)
             {
                 MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
                 return;
@@ -64,16 +68,16 @@ namespace WinFormsApp1.View
             openChildForm(new LostBook(staffId));
         }
 
-        private void CreateReaderCard_Click(object sender, EventArgs e)
-        {
-            activeSidrbar(sender);
-            openChildForm(new CreateReaderCard());
-        }
-
         private void btnAddBook_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ kho" && !isFullPer)
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
-            openChildForm(new ReciveNewBook());
+            openChildForm(new ReciveNewBook(staffId));
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -84,6 +88,12 @@ namespace WinFormsApp1.View
 
         private void btnCollectFines_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ quỷ" && !isFullPer)
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
             openChildForm(new CollectFines(staffId));
         }
@@ -126,8 +136,14 @@ namespace WinFormsApp1.View
 
         private void btnCreateReaderCard_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ thư" && !isFullPer)
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
-            openChildForm(new CreateReaderCard());
+            openChildForm(new CreateReaderCard(staffId));
         }
 
         private void btnBookSearch_Click(object sender, EventArgs e)
@@ -144,6 +160,12 @@ namespace WinFormsApp1.View
 
         private void btnLiquidation_Click(object sender, EventArgs e)
         {
+            var staff = staffRepo.getStaffById(staffId);
+            if (staff.BoPhan.ToLower() != "thủ kho" && !isFullPer)
+            {
+                MessageBox.Show("Chức vụ chỉ dành cho bộ phận thủ thư");
+                return;
+            }
             activeSidrbar(sender);
             openChildForm(new BookLiquidation());
         }
