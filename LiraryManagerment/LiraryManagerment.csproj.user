@@ -7,6 +7,9 @@
     <Compile Update="Views\BorrowBook\BorrowBookView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\CollectFines.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\CreateReaderCard.cs">
       <SubType>Form</SubType>
     </Compile>

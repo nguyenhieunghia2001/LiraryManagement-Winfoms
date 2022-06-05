@@ -23,36 +23,6 @@ namespace WinFormsApp1.View
             InitializeComponent();
             btnSelected = btnAddStaff;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pn_menu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel13_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -168,7 +138,14 @@ namespace WinFormsApp1.View
 
         private void btnReceiveBook_Click(object sender, EventArgs e)
         {
+            activeSidrbar(sender);
+            openChildForm(new ReturnBooks());
+        }
 
+        private void btnLiquidation_Click(object sender, EventArgs e)
+        {
+            activeSidrbar(sender);
+            openChildForm(new BookLiquidation());
         }
     }
 }

@@ -35,7 +35,7 @@ namespace WinFormsApp1.View
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnLiquidation = new System.Windows.Forms.Button();
             this.btnLostBook = new System.Windows.Forms.Button();
             this.btnCollectFines = new System.Windows.Forms.Button();
             this.btnReceiveBook = new System.Windows.Forms.Button();
@@ -72,7 +72,6 @@ namespace WinFormsApp1.View
             this.pn_Left.Name = "pn_Left";
             this.pn_Left.Size = new System.Drawing.Size(281, 801);
             this.pn_Left.TabIndex = 0;
-            this.pn_Left.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // pn_menu
             // 
@@ -82,14 +81,13 @@ namespace WinFormsApp1.View
             this.pn_menu.Name = "pn_menu";
             this.pn_menu.Size = new System.Drawing.Size(279, 657);
             this.pn_menu.TabIndex = 0;
-            this.pn_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_menu_Paint);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.panel3.Controls.Add(this.btnLogout);
             this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.btnLiquidation);
             this.panel3.Controls.Add(this.btnLostBook);
             this.panel3.Controls.Add(this.btnCollectFines);
             this.panel3.Controls.Add(this.btnReceiveBook);
@@ -136,20 +134,21 @@ namespace WinFormsApp1.View
             this.button9.Text = "Lập Báo Cáo";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnLiquidation
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(0, 451);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(279, 50);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Thanh Lý Sách";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnLiquidation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnLiquidation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLiquidation.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLiquidation.FlatAppearance.BorderSize = 0;
+            this.btnLiquidation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLiquidation.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLiquidation.Location = new System.Drawing.Point(0, 451);
+            this.btnLiquidation.Name = "btnLiquidation";
+            this.btnLiquidation.Size = new System.Drawing.Size(279, 50);
+            this.btnLiquidation.TabIndex = 7;
+            this.btnLiquidation.Text = "Thanh Lý Sách";
+            this.btnLiquidation.UseVisualStyleBackColor = false;
+            this.btnLiquidation.Click += new System.EventHandler(this.btnLiquidation_Click);
             // 
             // btnLostBook
             // 
@@ -343,7 +342,6 @@ namespace WinFormsApp1.View
             this.label1.Size = new System.Drawing.Size(162, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "CopyRight QLMM 2022";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pn_Right
             // 
@@ -399,7 +397,7 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnLiquidation;
         private System.Windows.Forms.Button btnLostBook;
         private System.Windows.Forms.Button btnCollectFines;
         private System.Windows.Forms.Button btnReceiveBook;
