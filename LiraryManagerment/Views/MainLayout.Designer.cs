@@ -33,18 +33,18 @@ namespace WinFormsApp1.View
             this.pn_Left = new System.Windows.Forms.Panel();
             this.pn_menu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnLostBook = new System.Windows.Forms.Button();
             this.btnCollectFines = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnReceiveBook = new System.Windows.Forms.Button();
             this.btnBorrowBook = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBookSearch = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCreateReaderCard = new System.Windows.Forms.Button();
             this.btnAddStaff = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.pn_logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -87,16 +87,16 @@ namespace WinFormsApp1.View
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.panel3.Controls.Add(this.button11);
+            this.panel3.Controls.Add(this.btnLogout);
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.btnLostBook);
             this.panel3.Controls.Add(this.btnCollectFines);
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.btnReceiveBook);
             this.panel3.Controls.Add(this.btnBorrowBook);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.btnBookSearch);
             this.panel3.Controls.Add(this.btnAddBook);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnCreateReaderCard);
             this.panel3.Controls.Add(this.btnAddStaff);
             this.panel3.Controls.Add(this.btnHome);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -105,37 +105,21 @@ namespace WinFormsApp1.View
             this.panel3.Size = new System.Drawing.Size(279, 657);
             this.panel3.TabIndex = 0;
             // 
-            // btnHome
+            // btnLogout
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(279, 50);
-            this.btnHome.TabIndex = 14;
-            this.btnHome.Text = "Trang chủ";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.Location = new System.Drawing.Point(0, 551);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(279, 50);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Đăng Xuất";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.Location = new System.Drawing.Point(0, 551);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(279, 50);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.Text = "Đăng Xuất";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // button9
             // 
@@ -199,20 +183,21 @@ namespace WinFormsApp1.View
             this.btnCollectFines.UseVisualStyleBackColor = false;
             this.btnCollectFines.Click += new System.EventHandler(this.btnCollectFines_Click);
             // 
-            // button5
+            // btnReceiveBook
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(0, 301);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(279, 50);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Nhận Trả Sách";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnReceiveBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnReceiveBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReceiveBook.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnReceiveBook.FlatAppearance.BorderSize = 0;
+            this.btnReceiveBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceiveBook.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReceiveBook.Location = new System.Drawing.Point(0, 301);
+            this.btnReceiveBook.Name = "btnReceiveBook";
+            this.btnReceiveBook.Size = new System.Drawing.Size(279, 50);
+            this.btnReceiveBook.TabIndex = 4;
+            this.btnReceiveBook.Text = "Nhận Trả Sách";
+            this.btnReceiveBook.UseVisualStyleBackColor = false;
+            this.btnReceiveBook.Click += new System.EventHandler(this.btnReceiveBook_Click);
             // 
             // btnBorrowBook
             // 
@@ -230,20 +215,21 @@ namespace WinFormsApp1.View
             this.btnBorrowBook.UseVisualStyleBackColor = false;
             this.btnBorrowBook.Click += new System.EventHandler(this.btnBorrowBook_Click);
             // 
-            // button4
+            // btnBookSearch
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(0, 201);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(279, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Tra Cứu Sách";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnBookSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnBookSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBookSearch.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBookSearch.FlatAppearance.BorderSize = 0;
+            this.btnBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBookSearch.Location = new System.Drawing.Point(0, 201);
+            this.btnBookSearch.Name = "btnBookSearch";
+            this.btnBookSearch.Size = new System.Drawing.Size(279, 50);
+            this.btnBookSearch.TabIndex = 3;
+            this.btnBookSearch.Text = "Tra Cứu Sách";
+            this.btnBookSearch.UseVisualStyleBackColor = false;
+            this.btnBookSearch.Click += new System.EventHandler(this.btnBookSearch_Click);
             // 
             // btnAddBook
             // 
@@ -261,21 +247,22 @@ namespace WinFormsApp1.View
             this.btnAddBook.UseVisualStyleBackColor = false;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // button2
+            // btnCreateReaderCard
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(0, 101);
-            this.button2.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Lập Thẻ Đọc Giả";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCreateReaderCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnCreateReaderCard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCreateReaderCard.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCreateReaderCard.FlatAppearance.BorderSize = 0;
+            this.btnCreateReaderCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateReaderCard.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCreateReaderCard.Location = new System.Drawing.Point(0, 101);
+            this.btnCreateReaderCard.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.btnCreateReaderCard.Name = "btnCreateReaderCard";
+            this.btnCreateReaderCard.Size = new System.Drawing.Size(279, 50);
+            this.btnCreateReaderCard.TabIndex = 1;
+            this.btnCreateReaderCard.Text = "Lập Thẻ Đọc Giả";
+            this.btnCreateReaderCard.UseVisualStyleBackColor = false;
+            this.btnCreateReaderCard.Click += new System.EventHandler(this.btnCreateReaderCard_Click);
             // 
             // btnAddStaff
             // 
@@ -293,6 +280,23 @@ namespace WinFormsApp1.View
             this.btnAddStaff.TabIndex = 0;
             this.btnAddStaff.Text = "Tiếp nhận nhân viên";
             this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click_1);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(279, 50);
+            this.btnHome.TabIndex = 14;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pn_logo
             // 
@@ -398,12 +402,12 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnLostBook;
         private System.Windows.Forms.Button btnCollectFines;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnReceiveBook;
+        private System.Windows.Forms.Button btnBookSearch;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCreateReaderCard;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnBorrowBook;
         private System.Windows.Forms.Button btnHome;
     }

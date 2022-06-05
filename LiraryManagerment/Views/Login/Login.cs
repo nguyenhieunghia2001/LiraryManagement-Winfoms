@@ -1,4 +1,5 @@
 ﻿using LiraryManagerment.Models;
+using LiraryManagerment.Repositiorys;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ namespace LiraryManagerment.Views.Login
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
@@ -20,39 +22,30 @@ namespace LiraryManagerment.Views.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            lbErrorLogin.Text = "";
-            var user = new Nhanvien()
-            {
-                Id = 1,
-                TenDangNhap = "admin",
-                MatKhau = "123456789",
-                BangCap = "Cao Đẳng",
-                BoPhan = "Thủ thư",
-                ChucVu = "Thủ thư",
-                DienThoai = "0212345678",
-                HoTen = "Nguyen Hieu Nghia",
-                NgaySinh = DateTime.Now,
-            };
-
-
-            var username = txtUserName.Text;
+            StaffRepository repo = new StaffRepository();
+            var userName = txtUserName.Text;
             var pwd = txtPwd.Text;
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(pwd))
+            var staff = repo.getStaffByUsername(userName);
+            if (staff == null)
             {
-                lbErrorLogin.Text = "Vui lòng điền đầy đủ thông tin";
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác");
                 return;
-                //Tên đăng nhập hoặc mật khẩu không chính xác
             }
-            if (username != user.TenDangNhap || pwd != user.MatKhau)
+            if (string.IsNullOrEmpty(staff.TenDangNhap) || string.IsNullOrEmpty(pwd))
             {
-                lbErrorLogin.Text = "Tên đăng nhập hoặc mật khẩu không chính xác";
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                return;
+            }
+            if (userName != staff.TenDangNhap || pwd != staff.MatKhau)
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác");
                 return;
             }
 
             this.Hide();
-            var mainLayout = new MainLayout(user.Id);
-            mainLayout.Show();  
+            var mainLayout = new MainLayout(staff.Id);
+            mainLayout.Show();
         }
     }
 }

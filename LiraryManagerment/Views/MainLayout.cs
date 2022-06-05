@@ -1,5 +1,6 @@
 ﻿using LiraryManagerment.Repositiorys;
 using LiraryManagerment.Views;
+using LiraryManagerment.Views.Login;
 using LiraryManagerment.Views.LostBook;
 using System;
 using System.Collections.Generic;
@@ -65,11 +66,6 @@ namespace WinFormsApp1.View
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnBorrowBook_Click(object sender, EventArgs e)
@@ -143,6 +139,36 @@ namespace WinFormsApp1.View
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Show();
+        }
+
+        private void btnAddStaff_Click_1(object sender, EventArgs e)
+        {
+            activeSidrbar(sender);
+            openChildForm(new CreateStaff());
+        }
+
+        private void btnCreateReaderCard_Click(object sender, EventArgs e)
+        {
+            activeSidrbar(sender);
+            openChildForm(new CreateReaderCard());
+        }
+
+        private void btnBookSearch_Click(object sender, EventArgs e)
+        {
+            activeSidrbar(sender);
+            openChildForm(new SearchBook());
+        }
+
+        private void btnReceiveBook_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
