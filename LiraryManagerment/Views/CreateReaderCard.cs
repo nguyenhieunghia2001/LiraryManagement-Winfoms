@@ -12,11 +12,13 @@ namespace LiraryManagerment.Views
 {
     public partial class CreateReaderCard : Form
     {
+        int staffId;
         List<string> typeReader = new List<string>() { "Thường", "VIP" };
-        List<Nhanvien> lstNhanvien = new List<Nhanvien>();
-        public CreateReaderCard()
+        Nhanvien Nhanvien = new Nhanvien();
+        public CreateReaderCard(int staffId)
         {
             InitializeComponent();
+            this.staffId = staffId;
         }
 
 
@@ -32,7 +34,7 @@ namespace LiraryManagerment.Views
             docgia.TienNo = 0;
             docgia.LoaiDocGia = cbb_LoaiDocGia.Text;
             docgia.NgayLapThe = dtp_NgayLapThe.Value;
-            docgia.NguoiLapTheId = ((Nhanvien)cbb_NguoiLap.SelectedValue).Id;
+            docgia.NguoiLapTheId = staffId;
             using (var context =  new heroku_c5dfe82f5ebcccfContext())
             {
                 var entity = context.Docgia;
@@ -60,10 +62,9 @@ namespace LiraryManagerment.Views
             cbb_LoaiDocGia.DataSource = typeReader;
             using(var db = new heroku_c5dfe82f5ebcccfContext())
             {
-                lstNhanvien = db.Nhanvien.ToList();
+                Nhanvien = db.Nhanvien.Where(d => d.Id == staffId).FirstOrDefault();
             }
-            cbb_NguoiLap.DataSource = lstNhanvien;
-            cbb_NguoiLap.DisplayMember = "HoTen";
+            tb_NguoiLap.Text = Nhanvien.HoTen.ToString();
         }
 
         private void listDocGia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

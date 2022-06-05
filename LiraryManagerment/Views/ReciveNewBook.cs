@@ -12,11 +12,13 @@ namespace LiraryManagerment.Views
 {
     public partial class ReciveNewBook : Form
     {
-        List<Nhanvien> lstNhanVien = new List<Nhanvien>();
+        Nhanvien NhanVien = new Nhanvien();
+        int staffId;
         List<Loaisach> lstLoaisach = new List<Loaisach>();
-        public ReciveNewBook()
+        public ReciveNewBook(int staffId)
         {
             InitializeComponent();
+            this.staffId = staffId;
         }
 
         private void ReciveNewBook_Load(object sender, EventArgs e)
@@ -24,11 +26,10 @@ namespace LiraryManagerment.Views
 
             using (var db = new heroku_c5dfe82f5ebcccfContext())
             {
-                lstNhanVien = db.Nhanvien.ToList();
                 lstLoaisach = db.Loaisach.ToList();
+                NhanVien = db.Nhanvien.Where(d => d.Id == staffId).FirstOrDefault();
             }
-            cbb_NguoiTiepNhan.DataSource = lstNhanVien;
-            cbb_NguoiTiepNhan.DisplayMember = "HoTen";
+            tb_NguoiTiepNhan.Text = NhanVien.HoTen;
             cbb_LoaiSach.DataSource = lstLoaisach;
             cbb_LoaiSach.DisplayMember = "TenLoai";
         }
@@ -45,8 +46,7 @@ namespace LiraryManagerment.Views
             sach.NamXb = Int32.Parse(tb_NamXuatBan.Text);
             sach.TriGia = Int32.Parse(tb_TriGia.Text);
             Loaisach ls = (Loaisach)cbb_LoaiSach.SelectedValue;
-            Nhanvien nv = (Nhanvien)cbb_NguoiTiepNhan.SelectedValue;
-            sach.NguoiTiepNhanId = nv.Id;
+            sach.NguoiTiepNhanId = staffId;
             sach.LoaiSachId = ls.Id;
             sach.TinhTrangId = 1;
             sach.NgayTao = dtp_NgayNhap.Value;
@@ -77,7 +77,6 @@ namespace LiraryManagerment.Views
             tb_NamXuatBan.Text = "";
             tb_TriGia.Text = "";
             cbb_LoaiSach.SelectedIndex = 0;
-            cbb_NguoiTiepNhan.SelectedIndex = 0;
             dtp_NgayNhap.Value = DateTime.Now;
         }
     }
