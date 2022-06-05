@@ -33,8 +33,7 @@ namespace WinFormsApp1.View
             this.pn_Left = new System.Windows.Forms.Panel();
             this.pn_menu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnLostBook = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@ namespace WinFormsApp1.View
             this.btnAddBook = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAddStaff = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.pn_logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -87,7 +87,7 @@ namespace WinFormsApp1.View
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.panel3.Controls.Add(this.button11);
+            this.panel3.Controls.Add(this.btnLogout);
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.btnLostBook);
@@ -105,37 +105,21 @@ namespace WinFormsApp1.View
             this.panel3.Size = new System.Drawing.Size(279, 657);
             this.panel3.TabIndex = 0;
             // 
-            // btnHome
+            // btnLogout
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(279, 50);
-            this.btnHome.TabIndex = 14;
-            this.btnHome.Text = "Trang chủ";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.Location = new System.Drawing.Point(0, 551);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(279, 50);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Đăng Xuất";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.Location = new System.Drawing.Point(0, 551);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(279, 50);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.Text = "Đăng Xuất";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // button9
             // 
@@ -294,6 +278,22 @@ namespace WinFormsApp1.View
             this.btnAddStaff.Text = "Tiếp nhận nhân viên";
             this.btnAddStaff.UseVisualStyleBackColor = false;
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(279, 50);
+            this.btnHome.TabIndex = 14;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // pn_logo
             // 
             this.pn_logo.Controls.Add(this.pictureBox1);
@@ -403,7 +403,7 @@ namespace WinFormsApp1.View
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnBorrowBook;
         private System.Windows.Forms.Button btnHome;
     }
